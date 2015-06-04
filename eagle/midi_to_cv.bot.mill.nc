@@ -4,7 +4,7 @@
 (This file generated from the board:)
 (.../atmega_knobs_cntrl/eagle/midi_to_cv.brd)
 (Current profile is .../pcbgcode.repo/profiles/mach.pp  )
-(This file generated 5/3/15 7:54 PM)
+(This file generated 5/29/15 11:57 PM)
 (Settings from pcb-machine.h)
 (spindle on time = 0.0000)
 (spindle speed = 15000.0000)
@@ -30,5 +30,14 @@ G00 Z1.0000
 G00 X0.0000  Y0.0000  
 M03
 G04 P0.000000
+G00 Z0.0500  
+G00 X-0.6000 Y0.0200  
+G01 Z-0.0630 F5     
+G01 X-0.6000 Y1.9513  F10    
+G03 X-0.6787 Y2.0300  R0.0787  F10    
+G01 X-3.9200 Y2.0300  
+G01 X-3.9200 Y0.0200  
+G01 X-0.6000 Y0.0200  
+G00 Z1.0000  
 M05
 M02
