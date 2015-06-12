@@ -9,12 +9,12 @@ MIDI_CREATE_DEFAULT_INSTANCE();
 
 #define LED 13
 
-#define MUX_BIT_0 12
-#define MUX_BIT_1 11
-#define MUX_BIT_2 10
-#define MUX_BIT_3 9
+#define MUX_BIT_0 8
+#define MUX_BIT_1 7
+#define MUX_BIT_2 6
+#define MUX_BIT_3 5
 
-#define NOISE_THRESHOLD 7
+#define NOISE_THRESHOLD 8
 
 int channel = 1;
 int controller_numbers[] = {
@@ -44,7 +44,7 @@ void setup()
 
 void loop () {
 
-  for (address = 0; address < 16; address++) {
+  for (address = 0; address < 10; address++) {
 
     mux_bit_0 = bitRead(address, 0);
     mux_bit_1 = bitRead(address, 1);
@@ -56,7 +56,7 @@ void loop () {
     digitalWrite(MUX_BIT_2, mux_bit_2);
     digitalWrite(MUX_BIT_3, mux_bit_3);
 
-delay(1);
+delayMicroseconds(1);
 
     new_value = analogRead(A0);
     

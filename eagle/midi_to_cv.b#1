@@ -1839,8 +1839,8 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="9860150" x="21.336" y="25.4" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R2" library="rcl" package="0207/10" value="220" x="25.4" y="9.652" rot="R270"/>
-<element name="PAD1" library="wirepad" package="2,54/0,9" value="midi pin 4" x="21.336" y="4.318"/>
-<element name="PAD2" library="wirepad" package="2,54/0,9" value="midi pin 5" x="40.64" y="4.318"/>
+<element name="MIN_P4" library="wirepad" package="2,54/0,9" value="midi pin 4" x="21.336" y="4.318"/>
+<element name="MIN_P5" library="wirepad" package="2,54/0,9" value="midi pin 5" x="40.64" y="4.318"/>
 <element name="R3" library="rcl" package="0207/10" value="270" x="29.972" y="20.32" rot="R180"/>
 <element name="R5" library="rcl" package="0207/10" value="220" x="22.352" y="12.446" rot="R90"/>
 <element name="R7" library="rcl" package="0207/10" value="1M" x="51.054" y="20.32" rot="R180"/>
@@ -2291,7 +2291,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$29">
 <contactref element="OK1" pad="3"/>
-<contactref element="PAD2" pad="1"/>
+<contactref element="MIN_P5" pad="1"/>
 <contactref element="D2" pad="A"/>
 <wire x1="35.306" y1="3.429" x2="35.306" y2="7.1628" width="0.5588" layer="16"/>
 <wire x1="35.306" y1="7.1628" x2="35.052" y2="7.62" width="0.5588" layer="16"/>
@@ -2315,7 +2315,7 @@ design rules under a new name.</description>
 <wire x1="28.3718" y1="3.429" x2="27.94" y2="3.81" width="0.5588" layer="16"/>
 </signal>
 <signal name="N$31">
-<contactref element="PAD1" pad="1"/>
+<contactref element="MIN_P4" pad="1"/>
 <contactref element="R2" pad="1"/>
 <wire x1="25.1714" y1="6.6294" x2="25.1714" y2="14.6304" width="0.5588" layer="16"/>
 <wire x1="21.336" y1="4.318" x2="25.1714" y2="6.6294" width="0.5588" layer="16"/>
