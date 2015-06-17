@@ -39,6 +39,7 @@ void setup()
 
   pinMode(LED, OUTPUT);
   
+  MIDI.turnThruOn();
   MIDI.begin();
 }
 
@@ -56,7 +57,7 @@ void loop () {
     digitalWrite(MUX_BIT_2, mux_bit_2);
     digitalWrite(MUX_BIT_3, mux_bit_3);
 
-delayMicroseconds(1);
+    delayMicroseconds(1);
 
     new_value = analogRead(A0);
     
@@ -70,7 +71,20 @@ delayMicroseconds(1);
       digitalWrite(LED, LOW);
       
     }
+    
+ 
+    if (MIDI.read()) {
+      digitalWrite(LED, HIGH);
+        // Thru on B has already pushed the input message to out B.
+        // Forward the message to out A as well.
+        MIDI.send(MIDI.getType(),
+                   MIDI.getData1(),
+                   MIDI.getData2(),
+                   MIDI.getChannel());
 
+      digitalWrite(LED, LOW);
+    }
+    
   }
 
 }
